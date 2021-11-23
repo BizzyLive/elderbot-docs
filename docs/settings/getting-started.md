@@ -32,3 +32,6 @@ This can be used to quickly and easily turn up/down the total volume of the bot.
 :::info
 Whilst currently labeled as SFX, this volume also globally affects alerts as well.
 :::
+
+### Backups
+This section contains settings for backups.
