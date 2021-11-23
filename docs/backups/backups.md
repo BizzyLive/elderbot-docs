@@ -2,5 +2,5 @@
 sidebar_position: 1
 ---
 
-# Getting Started
+# Backups
 This section covers how backups work and how to configure them.
