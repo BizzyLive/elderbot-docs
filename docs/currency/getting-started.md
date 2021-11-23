@@ -3,4 +3,4 @@ sidebar_position: 1
 ---
 
 # Getting Started
-TODO
+Information on Currency will be added when the feature is developed.

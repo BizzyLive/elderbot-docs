@@ -3,4 +3,4 @@ sidebar_position: 1
 ---
 
 # Getting Started
-TODO
+Information on Games will be added as the feature is developed.
