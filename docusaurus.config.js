@@ -24,7 +24,7 @@ const config = {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
-                    editUrl: 'https://github.com/BizzyLive/elderbot-issues',
+                    editUrl: 'https://github.com/BizzyLive/elderbot-docs',
                     routeBasePath: '/'
                 },
                 theme: {
@@ -44,7 +44,7 @@ const config = {
                 src: 'img/logo.png',
             },
             items: [{
-                href: 'https://github.com/BizzyLive/elderbot-docs',
+                href: 'https://github.com/BizzyLive/elderbot-issues',
                 label: 'GitHub',
                 position: 'right',
             }, ],
