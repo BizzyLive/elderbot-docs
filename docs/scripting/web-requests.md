@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Web Requests
@@ -19,8 +19,8 @@ Here is an example request that retrieves a bad pickup line from my bad pickup l
 ```js
 getWebRequest('https://bplapi.black-kro.dev/line/random', (res, err) => {
     if(res) resolve(res?.line?.line)
-    else if(err) resolve(`Command failed! Error: ${err}`)
-    else resolve('An unknown error occurred')
+    else if(err) reject(`Command failed! Error: ${err}`)
+    else reject('An unknown error occurred')
 })
 ```
 
@@ -35,8 +35,8 @@ Here we'll make a request to an API that doesn't exist, because I couldn't think
 ```js
 postWebRequest('https://mysite.com/api/bigchung', {my: 'data'}, (res, err) => {
     if(res) resolve(res)
-    else if(err) resolve(`Command failed! Error: ${err}`)
-    else resolve('An unknown error occurred')
+    else if(err) reject(`Command failed! Error: ${err}`)
+    else reject('An unknown error occurred')
 })
 ```
 

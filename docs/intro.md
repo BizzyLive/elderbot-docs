@@ -19,8 +19,7 @@ At this point, return the bot and you should now be greeted with the dashboard p
 
 ## Connecting Bot Accounts
 
-To actually use this as a bot, you will need to connect a Twitch bot account you have created with the bot.
-I will not provide instructions on how to create one, as there is plenty of instructions online.
+To actually use this as a bot, you will need to connect a Twitch bot account you have created. Twitch does not generally make a distinction between real user accounts and bot accounts(They are one and the same), so you just need to go to Twitch and make a new account for your bot.
 
 Once you create a new Twitch account for your bot, you will need to get an OAuth token for it. To do so, visit this page and sign in with your new bot account and authorize it: [https://twitchapps.com/tmi/](https://twitchapps.com/tmi/)
 
@@ -28,3 +27,5 @@ Once done, visit the Settings tab on the bot, type your bots username in and pas
 
 You have now got the bot setup and are ready to use basic features.
 For more information on how to setup other features, explore the pages listed in the sidebar.
+
+For connecting Discord, just go to the Discord developer portal, create an app, create a bot on it then copy the Bot token into the Discord bot token field and connect. Instructions for the creation of Discord bots can be found aplenty online.

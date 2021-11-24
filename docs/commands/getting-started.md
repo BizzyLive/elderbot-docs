@@ -20,7 +20,7 @@ This is the trigger. The '!' is added automatically, so don't add it. Not much t
 Similar to the name, but may also be shown in help commands.
 
 ### Command Response
-This is what the command returns when triggered, and is also where you place your command functions and arguments. In the case of a script function, this is where you place your script. Command functions/special arguments are all placed within the `{{}}` template. An example would be `{{time}}` which returns the current time for the PC running the bot.
+This is what the command returns when triggered, and is also where you place your command functions and arguments. In the case of a script function, this is where you place your script. Command functions/special arguments are all placed within the `{{}}` template. An example would be `{{time}}` which returns the current time for the PC running the bot. Command responses are limited to 500 characters(the Twitch maximum message size).
 
 More information on other command arguments can be found on other pages.
 

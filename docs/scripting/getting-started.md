@@ -3,14 +3,24 @@ sidebar_position: 1
 ---
 
 # Getting Started
-Commands good for basic output and some simple variables, but they lack the more complex logic and operations you might find you need.
+Commands are good for basic output and some simple variables, but they lack the more complex logic and operations you might find you need.
 To help out with this, ElderBot includes the ability to create commands that run a custom JS script and return the output.
 
 Now, the script context doesn't run within a function but instead you return the response using a `resolve` callback. This allows you to perform operations that may not run immediately(async/callback functions) and still be able to return the response. An example of this is the built-in web request functions that we'll talk about later.
 
+You may also call `reject` if an error occurred, but at the moment it has the same outcome as using `resolve`(simply returning the response to the calling context). This will likely remain the case for Twitch, but special error embeds maybe be shown on Discord at some point when using `reject`.
+
+:::caution
+Scripts have a maximum execution time of 5 seconds. If a script takes longer than 5 seconds to complete, the execution will be cancelled and a timeout error will be returned.
+:::
+
 ## Creating a Command
 Setting up a scripted command is quite simple, all you have to do is change the `type` of your command from `Command` to `Script`, place your script in the `Script` field 
 that appears when you select the Script type.
+
+:::caution
+Twitch's max message size is 500 characters. If your script's response exceeds this size, it will be cut off. Including for Discord.
+:::
 
 ## Script Basics
 Scripts run JavaScript in a sandboxed environment with a few variables and functions passed in you can access.
@@ -48,5 +58,5 @@ If the `location` variable is set to `Twitch`, you will be given access to a var
  * `twitch.channel`: The name of the channel this command was executed in
 
 :::caution
-The isBroadcaster variable is determined by checking the user ID between the executing user and the user signed into ElderBot, meaning this will *only* ever be true for the owner of the bot, even if the command is executed in a different channel(which shouldn't actually be possible anyway..)
+The isBroadcaster variable is determined by checking the user ID between the executing user and the user signed into ElderBot, meaning this will *only* ever be true for the owner of the bot, even if the command is executed in a different channel(which shouldn't actually be possible anyway).
 :::
