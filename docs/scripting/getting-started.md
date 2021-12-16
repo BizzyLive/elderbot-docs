@@ -60,3 +60,17 @@ If the `location` variable is set to `Twitch`, you will be given access to a var
 :::caution
 The isBroadcaster variable is determined by checking the user ID between the executing user and the user signed into ElderBot, meaning this will *only* ever be true for the owner of the bot, even if the command is executed in a different channel(which shouldn't actually be possible anyway).
 :::
+
+
+### Config
+The `config` variable contains some settings configured in the bot, such as custom currency name.
+```typescript
+interface ClientConfig {
+    /** Custom name for your bot currency(Example: dollars) */
+    currencyName: string
+
+    /** Custom shorthand code for your bot currency(Example: $) */
+    currencyCode: string
+}
+```
+
